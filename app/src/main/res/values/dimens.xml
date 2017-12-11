@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- text -->
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_extra_large">32sp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_fab">24dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+
+    <!-- icon -->
+    <dimen name="icon_status">128dp</dimen>
+
+    <!-- toolbar -->
+    <dimen name="toolbar_height">60dp</dimen>
+    <dimen name="toolbar_height_small">50dp</dimen>
+
+    <!-- header -->
+    <dimen name="bar_width">800dp</dimen>
+
+    <dimen name="header_medium">240dp</dimen>
+    <dimen name="header_small">200dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
