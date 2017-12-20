@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Retrofit</string>
+
+    <string name="title_photo">Photo</string>
+    <string name="title_post">Post</string>
+    <string name="title_comment">Comment</string>
+    <string name="title_realm">Switch Realm</string>
+
+    <string name="title_activity_create_post">Create Post</string>
+    <string name="title_activity_update_post">Update Post</string>
+    <string name="title_activity_splash_screen">Splash Screen</string>
+    <string name="title_login_page">Login Page</string>
 </resources>

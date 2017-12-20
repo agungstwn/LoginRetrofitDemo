@@ -11,12 +11,15 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static agung.app.com.retrofit.BuildConfig.BASE_API;
+
 /**
  * Created by agung on 12/11/2017.
  */
 
 public class ApiServer {
-    private static final String BASE_API = "http://10.14.164.97:8080";
+//    private static final String BASE_API = "http://10.14.164.97:8080";
+
     private static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(BASE_API)
             .callbackExecutor(Executors.newCachedThreadPool())
