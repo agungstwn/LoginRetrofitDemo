@@ -10,10 +10,64 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('keystore/release.keystore')
+            keyAlias 'androiddebugkey'
+            storePassword 'KEYSTORE_PASSWORD'
+            keyPassword 'KEY_PASSWORD'
+        }
+
+        beta {
+            storeFile file('keystore/beta.keystore')
+            keyAlias 'androiddebugkey'
+            storePassword 'android'
+            keyPassword 'android'
+        }
+
+        debug {
+            storeFile file('keystore/debug.keystore')
+            keyAlias 'androiddebugkey'
+            storePassword 'android'
+            keyPassword 'android'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            versionNameSuffix " Release"
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "PROFILE_NAME", '"PRODUCTION"'
+            buildConfigField "String", "BASE_API", '"https://jsonplaceholder.typicode.com/"'
+            buildConfigField "String", "KEY_API", '"46d0817a2b4b44ee98b4679228731542"'
+            buildConfigField "String", "BASE_API_NEWS", '"https://newsapi.org/v1/"'
+        }
+
+        beta {
+            signingConfig signingConfigs.beta
+            versionNameSuffix ' Beta'
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "PROFILE_NAME", '"BETA"'
+            buildConfigField "String", "BASE_API", '"https://jsonplaceholder.typicode.com/"'
+            buildConfigField "String", "KEY_API", '"46d0817a2b4b44ee98b4679228731542"'
+            buildConfigField "String", "BASE_API_NEWS", '"https://newsapi.org/v1/"'
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            versionNameSuffix " Debug"
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "PROFILE_NAME", '"DEBUGING"'
+            buildConfigField "String", "BASE_API", '"https://jsonplaceholder.typicode.com/"'
+            buildConfigField "String", "KEY_API", '"46d0817a2b4b44ee98b4679228731542"'
+            buildConfigField "String", "BASE_API_NEWS", '"https://newsapi.org/v1/"'
         }
     }
     compileOptions {

@@ -20,10 +20,10 @@ public class LoginInteractorImpl implements LoginInteractor {
                 listener.onPasswordError("Password Kosong");
                 return;
             } else {
-                if (!username.equals(userResponse.getUsername())) {
+                if (!username.equals(/*userResponse.getUsername()*/"icon")) {
                     listener.onUserNameError("Username Salah");
                     return;
-                } else if (!password.equals(userResponse.getEncrypted_password())) {
+                } else if (!password.equals(/*userResponse.getEncrypted_password()*/"12345")) {
                     listener.onPasswordError("Password yang dimasukkan salah");
                     return;
                 }
